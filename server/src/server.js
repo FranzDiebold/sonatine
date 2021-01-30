@@ -4,7 +4,7 @@ const { createSVGWindow } = require('svgdom');
 const { SVG, registerWindow } = require('@svgdotjs/svg.js');
 const svg2img = require('svg2img');
 
-const generateGlyph = require('./glyphGenerator');
+const generateGlyph = require('./lib/glyphGenerator');
 
 const app = express();
 app.use(helmet());
