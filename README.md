@@ -1,4 +1,4 @@
-# Notes Generator App
+# Notes
 
 - [SVG.js](https://github.com/svgdotjs/svg.js)
 - [Node.js](https://github.com/nodejs/node)
