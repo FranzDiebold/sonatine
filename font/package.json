@@ -1,0 +1,17 @@
+{
+  "name": "notes-font",
+  "version": "0.0.1",
+  "description": "Notes font",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Franz Diebold",
+  "license": "MIT",
+  "dependencies": {
+    "@svgdotjs/svg.js": "^3.0.16",
+    "lodash": "^4.17.20",
+    "lodash.product": "^18.9.19",
+    "svgdom": "^0.1.8"
+  }
+}

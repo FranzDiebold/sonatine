@@ -4,7 +4,7 @@ const { SVG, registerWindow } = require('@svgdotjs/svg.js')
 const _ = require('lodash');
 
 const allGlyphNames = require('./allGlyphNames');
-const generateGlyph = require('./glyphGenerator');
+const generateGlyph = require('./lib/glyphGenerator');
 
 const basePath = 'glyphs';
 const glyphsPath = `${basePath}/glyphs`;
@@ -37,13 +37,13 @@ const generateAllGlyphs = () => {
     const allGlyphs = allGlyphNames.getAllGlyphNames();
     const percentCount = Math.ceil(allGlyphs.length / 100.0);
     const glyphNames = allGlyphs
-        .map((glyphStr, idx) => {
+        .map((glyphs, idx) => {
             const glyphPath = `${glyphsPath}/glyph-${idx}.svg`;
-            generateGlyphSvg(glyphStr, glyphPath);
+            generateGlyphSvg(glyphs[0], glyphPath);
             if (idx % percentCount === 0) {
                 console.log(`${Math.ceil(100.0 * idx / allGlyphs.length)}% (${idx}/${allGlyphs.length})`);
             }
-            return [glyphPath, glyphStr];
+            return [glyphPath, glyphs];
         });
     const glyphsAndNamesList = _.unzip(glyphNames);
     fs.writeFile(`${basePath}/glyphs.json`, JSON.stringify({ icons: glyphsAndNamesList[0], names: glyphsAndNamesList[1]}), (err) => {
