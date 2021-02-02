@@ -4,14 +4,19 @@
   "description": "Notes font",
   "main": "index.js",
   "scripts": {
+    "generate-glyphs": "node generateAllGlyphs",
+    "generate-font": "node generateFont",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Franz Diebold",
   "license": "MIT",
   "dependencies": {
     "@svgdotjs/svg.js": "^3.0.16",
+    "extract-zip": "^2.0.1",
+    "fs-extra": "^9.1.0",
     "lodash": "^4.17.20",
     "lodash.product": "^18.9.19",
+    "puppeteer": "^5.5.0",
     "svgdom": "^0.1.8"
   }
 }
