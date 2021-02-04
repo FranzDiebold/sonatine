@@ -13,7 +13,7 @@ import Form from './Form';
 
 import './App.scss';
 
-import generateGlyph from './glyph-generator/glyphGenerator';
+import generateGlyph from './lib/glyphGenerator';
 
 function App() {
   const [glyphStr, setGlyphStr] = useState('c');
