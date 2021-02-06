@@ -13,7 +13,16 @@ import Form from './Form';
 
 import './App.scss';
 
+import { getAllGlyphNames } from './lib/allGlyphNames';
 import generateGlyph from './lib/glyphGenerator';
+
+const alternativeLigaturesMap = getAllGlyphNames()
+  .reduce((altLigaMap, ligaturesList) => {
+      ligaturesList.forEach(ligature => altLigaMap[ligature] = ligaturesList);
+      return altLigaMap;
+    },
+    {}
+  );
 
 function App() {
   const [glyphStr, setGlyphStr] = useState('c');
@@ -33,16 +42,10 @@ function App() {
   return (
     <>
       <Navbar fixed="top">
-        <Navbar.Brand>
-          <Navbar.Item renderAs="a" href="#">
-            <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28" />
-          </Navbar.Item>
-          <Navbar.Burger />
-        </Navbar.Brand>
         <Navbar.Menu >
           <Navbar.Container>
             <Navbar.Item href="#">
-              NoteGenerator
+              Noten
             </Navbar.Item>
           </Navbar.Container>
           <Navbar.Container position="end">
@@ -62,7 +65,7 @@ function App() {
             src={`data:image/svg+xml;utf8,${encodeURIComponent(glyph)}`}
             alt={`Zeichen ${glyphStr}`}
           />
-          {glyphStr}
+          {(alternativeLigaturesMap[glyphStr] || []).join(', ')}
         </Container>
       </Section>
       <Section>
