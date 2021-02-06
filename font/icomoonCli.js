@@ -151,7 +151,10 @@ async function pipeline(options = {}) {
       await page.waitForSelector(PAGE.NEW_SET_BUTTON, {visible: true});
       await page.click(PAGE.NEW_SET_BUTTON);
     }
-    logger('Uploaded config, going to upload new icon files');
+    logger(`Uploaded config, going to upload ${icons.length} new icon files`);
+    if (icons.length > 3000) {
+      logger('Info: This may take a while ;-)');
+    }
     await page.click(PAGE.MENU_BUTTON);
     const iconInput = await page.waitForSelector(PAGE.ICON_INPUT);
     const iconPaths = icons.map(getAbsolutePath);
@@ -162,11 +165,11 @@ async function pipeline(options = {}) {
     await page.click(PAGE.OPEN_FEATURES_MENU);
     await sleep(1000);
     await page.click(PAGE.SELECT_ALL_BUTTON);
-    logger('Uploaded and selected all new icons');
+    logger(`Uploaded and selected all ${icons.length} new icons`);
     await page.click(PAGE.GENERATE_LINK);
     await page.waitForSelector(PAGE.GLYPH_SET, {timeout: 0});
     if (names.length) {
-      logger('Change names of icons');
+      logger(`Change names of ${names.length} icons`);
       // sleep to ensure indexedDB is ready
       await sleep(1000);
       await page.evaluate(names => {
