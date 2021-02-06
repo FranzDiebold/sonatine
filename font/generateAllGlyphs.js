@@ -3,7 +3,7 @@ const { createSVGWindow } = require('svgdom');
 const { SVG, registerWindow } = require('@svgdotjs/svg.js')
 const _ = require('lodash');
 
-const allGlyphNames = require('./allGlyphNames');
+const allGlyphNames = require('./lib/allGlyphNames');
 const generateGlyph = require('./lib/glyphGenerator');
 
 const basePath = 'glyphs';
