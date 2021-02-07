@@ -17,6 +17,7 @@
     "lodash": "^4.17.20",
     "lodash.product": "^18.9.19",
     "puppeteer": "^5.5.0",
-    "svgdom": "^0.1.8"
+    "svgdom": "^0.1.8",
+    "xml2js": "^0.4.23"
   }
 }
