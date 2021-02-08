@@ -4,6 +4,10 @@
 help:  ## Show this help.
 	@egrep '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-25s\033[0m %s\n", $$1, $$2}'
 
+.PHONY: generate-fallback-glyphs
+generate-fallback-glyphs:  ## Generate fallback glyphs for the font
+	cd font/ && npm run generate-fallback-glyphs
+
 .PHONY: generate-glyphs
 generate-glyphs:  ## Generate all glyphs for the font
 	cd font/ && npm run generate-glyphs

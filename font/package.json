@@ -4,6 +4,7 @@
   "description": "Notes font",
   "main": "index.js",
   "scripts": {
+    "generate-fallback-glyphs": "node generateFallbackGlyphs",
     "generate-glyphs": "node generateAllGlyphs",
     "generate-font": "node generateFont",
     "test": "echo \"Error: no test specified\" && exit 1"
