@@ -49,14 +49,15 @@ const getCanvas = () => {
 }
 
 const generateGlyphSvg = (svgPath, filePath) => {
-    const sizeX = 55;
     const sizeY = 300;
+    const margin = 10;
     const color = '#000';
     const scaleFactor = 0.025;
 
     const canvas = getCanvas();
     const path = canvas.path(svgPath).stroke({ color: color, width: 0 });
-    const left = sizeX / 2 - path.cx();
+    const glyphWidth = path.width() * scaleFactor;
+    const left = margin + glyphWidth / 2 - path.cx();
     const top = sizeY / 2 - path.cy();
     path.transform({
         translate: {
@@ -66,7 +67,7 @@ const generateGlyphSvg = (svgPath, filePath) => {
         scale: scaleFactor,
         flip: 'y',
     });
-    canvas.size(sizeX, sizeY);
+    canvas.size(glyphWidth + 2 * margin, sizeY);
     fs.writeFileSync(filePath, canvas.svg());
 }
 
