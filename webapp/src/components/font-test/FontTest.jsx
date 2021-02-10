@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import Section from 'react-bulma-components/lib/components/section';
+import Hero from 'react-bulma-components/lib/components/hero';
 import Container from 'react-bulma-components/lib/components/container';
 import Columns from 'react-bulma-components/lib/components/columns';
 import { Field, Control, Label, Textarea } from 'react-bulma-components/lib/components/form';
@@ -16,27 +17,32 @@ function FontTest() {
 
   return (
     <Section>
-      <Container>
-        <Columns>
-          <Columns.Column>
-            <Field>
-              <Label>Eingabe</Label>
-              <Control>
-                <Textarea
-                  placeholder="Test"
-                  value={text}
-                  onChange={onChange}
-                />
-              </Control>
-            </Field>
-          </Columns.Column>
-          <Columns.Column>
-            <div className="notes">
-              {text}
-            </div>
-          </Columns.Column>
-        </Columns>
-      </Container>
+      <Hero>
+        <Hero.Body>
+          <Container>
+            <Columns>
+              <Columns.Column size={5}>
+                <Field>
+                  <Label>Eingabe</Label>
+                  <Control>
+                    <Textarea
+                      placeholder="Test"
+                      value={text}
+                      onChange={onChange}
+                      autoFocus
+                    />
+                  </Control>
+                </Field>
+              </Columns.Column>
+              <Columns.Column size={7}>
+                <div className="notes">
+                  {text}
+                </div>
+              </Columns.Column>
+            </Columns>
+          </Container>
+        </Hero.Body>
+      </Hero>
     </Section>
   );
 }

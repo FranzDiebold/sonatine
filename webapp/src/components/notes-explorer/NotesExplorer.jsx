@@ -10,6 +10,8 @@ import Form from './Form';
 import { getAllGlyphNames } from '../../lib/allGlyphNames';
 import generateGlyph from '../../lib/glyphGenerator';
 
+import './NotesExplorer.scss';
+
 const alternativeLigaturesMap = getAllGlyphNames()
   .reduce((altLigaMap, ligaturesList) => {
     ligaturesList.forEach(ligature => altLigaMap[ligature] = ligaturesList);
@@ -37,14 +39,16 @@ function NotesExplorer() {
     <>
       <Section>
         <Container className="has-text-centered">
-          <div>
+          <div className="glyph-container">
             <img
               src={`data:image/svg+xml;utf8,${encodeURIComponent(glyph)}`}
               alt={`Zeichen ${glyphStr}`}
             />
           </div>
           <div>
-            {(alternativeLigaturesMap[glyphStr] || []).join(', ')}
+            <span className="glyph-string has-tooltip-bottom" data-tooltip="Mögliche Eingaben des Zeichens">
+              {(alternativeLigaturesMap[glyphStr] || []).join(', ')}
+            </span>
           </div>
         </Container>
       </Section>
