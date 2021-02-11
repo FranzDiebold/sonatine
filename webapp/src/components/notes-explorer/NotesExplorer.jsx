@@ -46,8 +46,13 @@ function NotesExplorer() {
             />
           </div>
           <div>
-            <span className="glyph-string has-tooltip-bottom" data-tooltip="Mögliche Eingaben des Zeichens">
-              {(alternativeLigaturesMap[glyphStr] || []).join(', ')}
+            <span className="ligatures-container has-tooltip-bottom" data-tooltip="Mögliche Eingaben des Zeichens">
+              {
+                (alternativeLigaturesMap[glyphStr] || [])
+                  .map(ligature => (
+                    <span key={ligature} className="ligature">{ligature}</span>
+                  ))
+              }
             </span>
           </div>
         </Container>
