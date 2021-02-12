@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
-import Section from 'react-bulma-components/lib/components/section';
 import Container from 'react-bulma-components/lib/components/container';
+import Columns from 'react-bulma-components/lib/components/columns';
 
 import { SVG } from '@svgdotjs/svg.js'
 
@@ -36,9 +36,9 @@ function NotesExplorer() {
   }, [glyphStr]);
 
   return (
-    <>
-      <Section>
-        <Container className="has-text-centered">
+    <Container>
+      <Columns>
+        <Columns.Column size={4} className="has-text-centered">
           <div className="glyph-container">
             <img
               src={`data:image/svg+xml;utf8,${encodeURIComponent(glyph)}`}
@@ -55,14 +55,12 @@ function NotesExplorer() {
               }
             </span>
           </div>
-        </Container>
-      </Section>
-      <Section>
-        <Container>
+        </Columns.Column>
+        <Columns.Column size={8}>
           <Form onChange={setGlyphStr} />
-        </Container>
-      </Section>
-    </>
+        </Columns.Column>
+      </Columns>
+    </Container>
   );
 }
 
