@@ -18,7 +18,7 @@ generate-font:  ## Generate the font using IcoMoon.io
 
 .PHONY: bundle-font
 bundle-font:  ## Bundle the font to a zip file
-  cd font/dist && zip -r noten.zip noten noten.css specimen.html
+	cd font/dist && zip -r noten.zip noten noten.css specimen.html
 
 .PHONY: run-server
 run-server:  ## Run the server locally
