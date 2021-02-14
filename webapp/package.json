@@ -1,7 +1,8 @@
 {
   "name": "notes-generator-webapp",
   "version": "0.1.0",
-  "private": true,
+  "license": "MIT",
+  "homepage": "https://www.noten.ga",
   "dependencies": {
     "@creativebulma/bulma-tooltip": "^1.2.0",
     "@svgdotjs/svg.js": "^3.0.16",
