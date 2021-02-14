@@ -16,10 +16,22 @@ generate-glyphs:  ## Generate all glyphs for the font
 generate-font:  ## Generate the font using IcoMoon.io
 	cd font/ && npm run generate-font
 
+.PHONY: bundle-font
+bundle-font:  ## Bundle the font to a zip file
+  cd font/dist && zip -r noten.zip noten noten.css specimen.html
+
 .PHONY: run-server
 run-server:  ## Run the server locally
 	cd server && npm run start
 
+.PHONY: install-webapp
+install-webapp:  ## Install webapp dependencies
+	cd webapp && npm install
+
 .PHONY: run-webapp
 run-webapp:  ## Run the webapp locally
 	cd webapp && npm run start
+
+.PHONY: build-webapp
+build-webapp:  ## Build the webapp
+	cd webapp && npm run build
