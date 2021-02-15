@@ -1,7 +1,7 @@
 {
-  "name": "notes-font",
+  "name": "musical-symbols-font",
   "version": "0.0.1",
-  "description": "Notes font",
+  "description": "Musical symbols font",
   "main": "index.js",
   "scripts": {
     "generate-fallback-glyphs": "node generateFallbackGlyphs",

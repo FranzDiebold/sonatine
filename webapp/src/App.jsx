@@ -13,7 +13,7 @@ import Content from 'react-bulma-components/lib/components/content';
 
 import './App.scss';
 
-import NotesExplorer from 'components/notes-explorer/NotesExplorer';
+import MusicalSymbolsExplorer from 'components/musical-symbols-explorer/MusicalSymbolsExplorer';
 import FontTest from "components/font-test/FontTest";
 
 function App() {
@@ -51,7 +51,7 @@ function App() {
       </Navbar>
       <Switch>
         <Route exact path="/">
-          <NotesExplorer />
+          <MusicalSymbolsExplorer />
         </Route>
         <Route exact path="/test">
           <FontTest />

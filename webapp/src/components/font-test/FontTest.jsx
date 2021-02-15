@@ -35,7 +35,7 @@ function FontTest() {
                 </Field>
               </Columns.Column>
               <Columns.Column size={7}>
-                <div className="notes">
+                <div className="musical-symbols">
                   {text}
                 </div>
               </Columns.Column>

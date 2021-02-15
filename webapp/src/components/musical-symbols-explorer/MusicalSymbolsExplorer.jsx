@@ -10,7 +10,7 @@ import Form from './Form';
 import { getAllGlyphNames } from '../../lib/allGlyphNames';
 import generateGlyph from '../../lib/glyphGenerator';
 
-import './NotesExplorer.scss';
+import './MusicalSymbolsExplorer.scss';
 
 const alternativeLigaturesMap = getAllGlyphNames()
   .reduce((altLigaMap, ligaturesList) => {
@@ -20,7 +20,7 @@ const alternativeLigaturesMap = getAllGlyphNames()
     {}
   );
 
-function NotesExplorer() {
+function MusicalSymbolsExplorer() {
   const [glyphStr, setGlyphStr] = useState('c');
   const [glyph, setGlyph] = useState(null);
 
@@ -64,4 +64,4 @@ function NotesExplorer() {
   );
 }
 
-export default NotesExplorer;
+export default MusicalSymbolsExplorer;
