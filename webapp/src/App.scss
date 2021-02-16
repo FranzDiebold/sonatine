@@ -1,10 +1,23 @@
 @import "~react-bulma-components/src/index.sass";
 @import "~@creativebulma/bulma-tooltip/src/sass/index.sass";
 
-input[type=radio] {
-    margin-right: 8px;
+.content-container {
+  min-height: calc(100vh - 3.25rem - 2.6rem);
 }
 
 .footer {
-  padding: 1rem;
+  padding: 0.7rem 0;
+  font-size: 0.8rem;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: $link;
+    }
+  }
+
+  .item:not(:first-child) {
+    padding-left: 1.5rem;
+  }
 }

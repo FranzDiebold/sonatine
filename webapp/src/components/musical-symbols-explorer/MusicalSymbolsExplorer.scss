@@ -3,8 +3,8 @@
   background-repeat: repeat-x;
 }
 
-span.ligatures-container[data-tooltip] {
-  border-bottom: none;
+.download-symbol-container {
+  padding-bottom: 2rem;
 }
 
 .ligature {
@@ -14,4 +14,13 @@ span.ligatures-container[data-tooltip] {
   margin: 0.4rem;
   border-radius: 0.3rem;
   background-color: #eeeeee;
+  cursor: pointer;
+}
+
+span.ligature[data-tooltip] {
+  border-bottom: none;
+}
+
+input[type=radio] {
+  margin-right: 8px;
 }
