@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import Section from 'react-bulma-components/lib/components/section';
 import Hero from 'react-bulma-components/lib/components/hero';
 import Container from 'react-bulma-components/lib/components/container';
@@ -7,10 +5,14 @@ import Columns from 'react-bulma-components/lib/components/columns';
 import { Field, Control, Label, Textarea } from 'react-bulma-components/lib/components/form';
 import Box from 'react-bulma-components/lib/components/box';
 
+import useStateWithLocalStorage from '../../util/stateWithLocalStorage';
+
 import './FontTest.scss';
 
+const INITIAL_TEXT_STATE = 'vs-#-44c--gh---hh--/--eh.--p--/--a--h--c2--a--/-hh?--p--d2a--c2a--/\nvs-#--h---g---p--gaha--/--c2--e2--p--c2--/-dh?--ph--)'
+
 function FontTest() {
-  const [text, setText] = useState('vs-#-44c--gh---hh--/--eh.--p--/--a--h--c2--a--/-hh?--p--d2a--c2a--/\nvs-#--h---g---p--gaha--/--c2--e2--p--c2--/-dh?--ph--)');
+  const [text, setText] = useStateWithLocalStorage(INITIAL_TEXT_STATE, 'musicalSymbolsFontTestState');
 
   function onChange(event) {
     setText(event.target.value);

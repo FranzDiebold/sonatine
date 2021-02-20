@@ -1,8 +1,39 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Tabs from 'react-bulma-components/lib/components/tabs';
 import Columns from 'react-bulma-components/lib/components/columns';
 import { Field, Label, Control, Radio, Checkbox } from 'react-bulma-components/lib/components/form';
+
+import useStateWithLocalStorage from '../../util/stateWithLocalStorage';
+
+const INITIAL_FORM_STATE = {
+  activeTabIdx: 0,
+  note: {
+    accidentalPrefix: '',
+    name: 'c',
+    octave: '1',
+    duration: 'v',
+    dotted: false,
+    articulation: '',
+  },
+  rest: {
+    duration: 'v',
+    dotted: false,
+  },
+  clef: {
+    type: 'g',
+  },
+  keySignature: {
+    count: '1',
+    type: '#',
+  },
+  timeSignature: {
+    type: '34',
+  },
+  otherSymbol: {
+    symbol: '-',
+  },
+};
 
 function NoteForm(props) {
   const [state, setState] = useState(props.state);
@@ -455,34 +486,11 @@ function OtherSymbolForm(props) {
 }
 
 function Form(props) {
-  const [state, setState] = useState({
-    activeTabIdx: 0,
-    note: {
-      accidentalPrefix: '',
-      name: 'c',
-      octave: '1',
-      duration: 'v',
-      dotted: false,
-      articulation: '',
-    },
-    rest: {
-      duration: 'v',
-      dotted: false,
-    },
-    clef: {
-      type: 'g',
-    },
-    keySignature: {
-      count: '1',
-      type: '#',
-    },
-    timeSignature: {
-      type: '34',
-    },
-    otherSymbol: {
-      symbol: '-',
-    },
-  });
+  const [state, setState] = useStateWithLocalStorage(INITIAL_FORM_STATE, 'musicalSymbolsExplorerFormState');
+
+  useEffect(() => {
+    props.onChange(stateToGlyphStr(state));
+  }, []);
 
   function stateToGlyphStr(state) {
     if (state.activeTabIdx === 0) {
