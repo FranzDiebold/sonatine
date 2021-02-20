@@ -4,7 +4,7 @@ import Tabs from 'react-bulma-components/lib/components/tabs';
 import Columns from 'react-bulma-components/lib/components/columns';
 import { Field, Label, Control, Radio, Checkbox } from 'react-bulma-components/lib/components/form';
 
-import useStateWithLocalStorage from '../../util/stateWithLocalStorage';
+import useStateWithSesionStorage from '../../util/stateWithSessionStorage';
 
 const INITIAL_FORM_STATE = {
   activeTabIdx: 0,
@@ -486,7 +486,7 @@ function OtherSymbolForm(props) {
 }
 
 function Form(props) {
-  const [state, setState] = useStateWithLocalStorage(INITIAL_FORM_STATE, 'musicalSymbolsExplorerFormState');
+  const [state, setState] = useStateWithSesionStorage(INITIAL_FORM_STATE, 'musicalSymbolsExplorerFormState');
 
   useEffect(() => {
     props.onChange(stateToGlyphStr(state));
