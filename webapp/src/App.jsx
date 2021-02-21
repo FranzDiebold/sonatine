@@ -12,6 +12,7 @@ import Navbar from 'react-bulma-components/lib/components/navbar';
 import Container from 'react-bulma-components/lib/components/container';
 import Icon from 'react-bulma-components/lib/components/icon';
 import Footer from 'react-bulma-components/lib/components/footer';
+import Columns from 'react-bulma-components/lib/components/columns';
 
 import './App.scss';
 
@@ -111,9 +112,16 @@ function App() {
         </Switch>
       </div>
       <Footer onClick={hideNavbar}>
-        <Container className="has-text-right">
-          <Link to="/impressum" className="item">Impressum</Link>
-          <Link to="/datenschutz" className="item">Datenschutz</Link>
+        <Container>
+          <Columns>
+            <Columns.Column>
+              Made with ❤️ by <a href="https://www.julia-diebold.de" target="_blank">Julia Diebold</a> &amp; <a href="https://www.diebold.io" target="_blank">Franz Diebold</a>
+            </Columns.Column>
+            <Columns.Column className="has-text-right">
+              <Link to="/impressum" className="item">Impressum</Link>
+              <Link to="/datenschutz" className="item">Datenschutz</Link>
+            </Columns.Column>
+          </Columns>
         </Container>
       </Footer>
     </Router>
