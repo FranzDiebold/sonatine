@@ -10,6 +10,14 @@
 
 ## Font
 
+### Stats
+
+| Number of  | #      |
+|------------|--------|
+| Glyphs     | 11,820 |
+| Characters | 26     |
+| Ligatures  | 47,826 |
+
 - [IcoMoon](https://icomoon.io)
 - [IcoMoon CLI](https://github.com/Yuyz0112/icomoon-cli)
 - [Docker Puppeteer](https://github.com/buildkite/docker-puppeteer)
