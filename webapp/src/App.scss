@@ -1,5 +1,14 @@
+@import "_variables";
 @import "~react-bulma-components/src/index.sass";
 @import "~@creativebulma/bulma-tooltip/src/sass/index.sass";
+
+.navbar {
+  a.navbar-item {
+    &.is-active {
+      color: $link;
+    }
+  }
+}
 
 .content-container {
   min-height: calc(100vh - 3.25rem - 2.6rem);
