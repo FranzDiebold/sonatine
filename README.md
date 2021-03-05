@@ -22,7 +22,7 @@ Furthermore, the following sources and tools were used during development:
 
 ## Font
 
-The font combines all musical symbols to write musical notes in your favorite typesetting or word processing software.
+The font "Sonatine" combines all musical symbols to write musical notes in your favorite typesetting or word processing software.
 
 ### Stats
 
