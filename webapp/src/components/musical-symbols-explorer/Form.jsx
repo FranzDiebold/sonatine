@@ -490,7 +490,7 @@ function Form(props) {
 
   useEffect(() => {
     props.onChange(stateToGlyphStr(state));
-  }, []);
+  });
 
   function stateToGlyphStr(state) {
     if (state.activeTabIdx === 0) {

@@ -49,7 +49,7 @@ function Privacy() {
 
           <h3>Datenschutzerklärung für die Nutzung von GitHub Pages</h3>
           <p>
-            Diese Website wird auf Servern von <a href="https://www.github.com" target="_blank">Github</a> Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA gehostet. Beachten Sie daher auch die <a href="https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement" target="_blank">GitHub Privacy Policy</a>.
+            Diese Website wird auf Servern von <a href="https://www.github.com" target="_blank" rel="noreferrer">Github</a> Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA gehostet. Beachten Sie daher auch die <a href="https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement" target="_blank" rel="noreferrer">GitHub Privacy Policy</a>.
           </p>
 
           <h2>3. Allgemeine Hinweise und Pflicht&shy;informationen</h2>

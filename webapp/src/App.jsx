@@ -119,7 +119,7 @@ function App() {
         <Container>
           <Columns>
             <Columns.Column>
-              Made with ❤️ by <a href="https://www.julia-diebold.de" target="_blank">Julia Diebold</a> &amp; <a href="https://www.diebold.io" target="_blank">Franz Diebold</a>
+              Made with ❤️ by <a href="https://www.julia-diebold.de" target="_blank" rel="noreferrer">Julia Diebold</a> &amp; <a href="https://www.diebold.io" target="_blank" rel="noreferrer">Franz Diebold</a>
             </Columns.Column>
             <Columns.Column className="has-text-right">
               <Link to="/impressum" className="item">Impressum</Link>

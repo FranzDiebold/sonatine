@@ -9,7 +9,7 @@ const useStateWithSessionStorage = (initialValue, sessionStorageKey) => {
 
   useEffect(() => {
     sessionStorage.setItem(sessionStorageKey, JSON.stringify(value));
-  }, [value]);
+  }, [value, sessionStorageKey]);
 
   return [value, setValue];
 };
