@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-
 import Section from 'react-bulma-components/lib/components/section';
 import Hero from 'react-bulma-components/lib/components/hero';
 import Container from 'react-bulma-components/lib/components/container';
@@ -11,12 +9,7 @@ import Notification from 'react-bulma-components/lib/components/notification';
 import './FontDownload.scss';
 
 function FontDownload() {
-  const fontDownloadUrl = 'https://github.com/FranzDiebold/github-env-vars-action/raw/primary/images/github-env-vars-action-social-preview.png'; //'https://github.com/FranzDiebold/musical-symbols/raw/main/font/dist/noten.zip';
-  const fontDownloadButtonId = 'font-download-button';
-
-  useEffect(() => {
-    //document.getElementById(fontDownloadButtonId).click();
-  }, []);
+  const fontDownloadUrl = 'https://github.com/FranzDiebold/musical-symbols/raw/main/font/dist/sonatine.zip';
 
   return (
     <Section>
@@ -34,7 +27,6 @@ function FontDownload() {
               >
                 <div className="has-text-centered">
                   <Button
-                    id={fontDownloadButtonId}
                     color="primary"
                     size="large"
                     renderAs="a"
