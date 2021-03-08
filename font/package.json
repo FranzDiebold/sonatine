@@ -1,7 +1,7 @@
 {
-  "name": "musical-symbols-font",
+  "name": "sonatine-font",
   "version": "0.0.1",
-  "description": "Musical symbols font 'Sonatine'",
+  "description": "Musical symbols font",
   "main": "index.js",
   "scripts": {
     "generate-fallback-glyphs": "node generateFallbackGlyphs",

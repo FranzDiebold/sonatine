@@ -1,5 +1,5 @@
 {
-  "name": "musical-symbols-generator-app",
+  "name": "sonatine-server",
   "version": "0.0.1",
   "description": "",
   "main": "src/server.js",
@@ -13,7 +13,7 @@
     "@svgdotjs/svg.js": "^3.0.16",
     "express": "^4.17.1",
     "helmet": "^4.4.1",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "svg2img": "^0.9.1",
     "svgdom": "^0.1.8"
   },

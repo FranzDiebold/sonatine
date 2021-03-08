@@ -1,5 +1,5 @@
 {
-  "name": "musical-symbols-generator-lib",
+  "name": "sonatine-lib",
   "version": "0.0.1",
   "description": "Generate musical symbols as SVG or PNG files.",
   "main": "glyphGenerator.js",
@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "@svgdotjs/svg.js": "^3.0.16",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "lodash.product": "^18.9.19"
   }
 }
