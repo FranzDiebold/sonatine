@@ -15,6 +15,7 @@ import Footer from 'react-bulma-components/lib/components/footer';
 import Columns from 'react-bulma-components/lib/components/columns';
 
 import './App.scss';
+import logo from './Sonatine_logo.svg';
 
 import ScrollToTop from 'components/scroll-to-top/ScrollToTop';
 import MusicalSymbolsExplorer from 'components/musical-symbols-explorer/MusicalSymbolsExplorer';
@@ -41,7 +42,7 @@ function App() {
         <Container>
           <Navbar.Brand>
             <Navbar.Item to="/" renderAs={NavLink} onClick={hideNavbar}>
-              <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28" />
+              <img src={logo} alt="Sonatine logo" />
             </Navbar.Item>
             <Navbar.Burger onClick={toggleNavbar} />
           </Navbar.Brand>
