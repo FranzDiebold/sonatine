@@ -4,7 +4,7 @@
   "description": "Webapp for generating musical symbols.",
   "author": "Franz Diebold",
   "license": "MIT",
-  "homepage": "https://www.noten.ga",
+  "homepage": "https://www.sonatine.ml",
   "dependencies": {
     "@creativebulma/bulma-tooltip": "^1.2.0",
     "@svgdotjs/svg.js": "^3.0.16",
