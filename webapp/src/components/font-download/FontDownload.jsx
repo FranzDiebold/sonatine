@@ -9,7 +9,7 @@ import Notification from 'react-bulma-components/lib/components/notification';
 import './FontDownload.scss';
 
 function FontDownload() {
-  const fontDownloadUrl = 'https://github.com/FranzDiebold/musical-symbols/raw/main/font/dist/sonatine.zip';
+  const fontDownloadUrl = 'https://github.com/FranzDiebold/sonatine/raw/main/font/dist/sonatine.zip';
 
   return (
     <Section>

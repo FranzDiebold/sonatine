@@ -3,7 +3,7 @@
 ## A musical symbols explorer and a font to easily write musical notes!
 
 <a href="https://www.sonatine.ml" target="_blank"><img src="https://img.shields.io/badge/demo-online-3273dc.svg" alt="demo: online"></a>
-[![Build and Deploy](https://github.com/FranzDiebold/musical-symbols/actions/workflows/deploy.yml/badge.svg)](https://github.com/FranzDiebold/musical-symbols/actions/workflows/deploy.yml)
+[![Build and Deploy](https://github.com/FranzDiebold/sonatine/actions/workflows/deploy.yml/badge.svg)](https://github.com/FranzDiebold/sonatine/actions/workflows/deploy.yml)
 [![license: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](./LICENSE.md)
 
 The project is splitted into several modules:
