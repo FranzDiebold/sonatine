@@ -11,23 +11,23 @@ app.use(helmet());
 const port = process.env.PORT || 3000;
 
 const getCanvas = () => {
-    const window = createSVGWindow();
-    const document = window.document;
-    registerWindow(window, document);
-    return SVG(document.documentElement);
+  const window = createSVGWindow();
+  const document = window.document;
+  registerWindow(window, document);
+  return SVG(document.documentElement);
 };
 
 app.get('/:glyphName.svg', (req, res) => {
-    const canvas = getCanvas();
+  const canvas = getCanvas();
 
-    const glyphSize = generateGlyph(canvas, req.params.glyphName);
-    if (glyphSize) {
-      canvas.size(glyphSize.width, glyphSize.height);
-      res.header('Content-Type', 'image/svg+xml')
-      res.send(canvas.svg());
-    } else {
-      res.sendStatus(404);
-    }
+  const glyphSize = generateGlyph(canvas, req.params.glyphName);
+  if (glyphSize) {
+    canvas.size(glyphSize.width, glyphSize.height);
+    res.header('Content-Type', 'image/svg+xml')
+    res.send(canvas.svg());
+  } else {
+    res.sendStatus(404);
+  }
 });
 
 app.get('/:glyphName.png', (req, res) => {
@@ -41,7 +41,7 @@ app.get('/:glyphName.png', (req, res) => {
       height: scalingFactor * glyphSize.height,
       preserveAspectRatio: true,
     };
-    svg2img(canvas.svg(), imgOptions, function(error, buffer) {
+    svg2img(canvas.svg(), imgOptions, function (error, buffer) {
       res.writeHead(200, {
         'Content-Type': 'image/png',
         'Content-Length': buffer.length
@@ -54,5 +54,5 @@ app.get('/:glyphName.png', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Sonatine server app listening at http://localhost:${port}`)
 });
