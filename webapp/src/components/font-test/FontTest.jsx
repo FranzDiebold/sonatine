@@ -9,7 +9,7 @@ import useStateWithSesionStorage from '../../util/stateWithSessionStorage';
 
 import './FontTest.scss';
 
-const INITIAL_TEXT_STATE = 'vs-#-44c--gh---hh--/--eh.--p--/--a--h--c2--a--/-hh?--p--d2a--c2a--/\nvs-#--h---g---p--gaha--/--c2--e2--p--c2--/-dh?--ph--)'
+const INITIAL_TEXT_STATE = 'vs-#-44c--gh---hh--/--eh.--p--/--a--h--c2--a1v--/-hh?--pv--d2a--c2a--/\nvs-#--h1---gv---p--gaha--/--c2--e2--pv--c2--/-dh?--ph--)'
 
 function FontTest() {
   const [text, setText] = useStateWithSesionStorage(INITIAL_TEXT_STATE, 'musicalSymbolsFontTestState');
