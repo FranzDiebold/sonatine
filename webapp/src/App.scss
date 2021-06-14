@@ -40,7 +40,7 @@
   padding: 0.7rem 0;
   font-size: 0.8rem;
 
-  // fix columns to wide on mobile (https://github.com/jgthms/bulma/issues/449)
+  // fix columns too wide on mobile (https://github.com/jgthms/bulma/issues/449)
   @media screen and (max-width: 1024px) {
       .columns {
           margin-left: 0;

@@ -6,7 +6,7 @@ import {
   Link,
   NavLink,
   Redirect
-} from "react-router-dom";
+} from 'react-router-dom';
 
 import Navbar from 'react-bulma-components/lib/components/navbar';
 import Container from 'react-bulma-components/lib/components/container';
