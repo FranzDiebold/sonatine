@@ -5,14 +5,14 @@ import Columns from 'react-bulma-components/lib/components/columns';
 import { Field, Control, Label, Textarea } from 'react-bulma-components/lib/components/form';
 import Box from 'react-bulma-components/lib/components/box';
 
-import useStateWithSesionStorage from '../../util/stateWithSessionStorage';
+import useStateWithSessionStorage from '../../util/stateWithSessionStorage';
 
 import './FontTest.scss';
 
 const INITIAL_TEXT_STATE = 'vs-#-44c--gh---hh--/--eh.--p--/--a--h--c2--a1v--/-hh?--pv--d2a--c2a--/\nvs-#--h1---gv---p--gaha--/--c2--e2--pv--c2--/-dh?--ph--)'
 
 function FontTest() {
-  const [text, setText] = useStateWithSesionStorage(INITIAL_TEXT_STATE, 'musicalSymbolsFontTestState');
+  const [text, setText] = useStateWithSessionStorage(INITIAL_TEXT_STATE, 'musicalSymbolsFontTestState');
 
   function onChange(event) {
     setText(event.target.value);
