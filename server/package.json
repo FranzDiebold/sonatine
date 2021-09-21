@@ -1,6 +1,6 @@
 {
   "name": "sonatine-server",
-  "version": "0.0.1",
+  "version": "0.3.0",
   "description": "",
   "main": "src/server.js",
   "scripts": {
@@ -10,11 +10,11 @@
   "author": "Franz Diebold",
   "license": "MIT",
   "dependencies": {
-    "@svgdotjs/svg.js": "^3.0.16",
+    "@svgdotjs/svg.js": "^3.1.1",
     "express": "^4.17.1",
-    "helmet": "^4.4.1",
+    "helmet": "^4.6.0",
     "lodash": "^4.17.21",
-    "svg2img": "^0.9.1",
+    "svg2img": "^0.9.3",
     "svgdom": "^0.1.8"
   },
   "engines": {
