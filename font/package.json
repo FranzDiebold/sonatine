@@ -12,13 +12,13 @@
   "author": "Franz Diebold",
   "license": "MIT",
   "dependencies": {
-    "@svgdotjs/svg.js": "^3.0.16",
+    "@svgdotjs/svg.js": "^3.1.1",
     "extract-zip": "^2.0.1",
     "fs-extra": "^9.1.0",
     "lodash": "^4.17.21",
     "lodash.product": "^18.9.19",
     "puppeteer": "^5.5.0",
-    "svgdom": "^0.1.8",
+    "svgdom": "^0.1.10",
     "xml2js": "^0.4.23"
   }
 }
