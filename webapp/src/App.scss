@@ -30,6 +30,14 @@
   .navbar-link.is-active {
     background-color: #ffffff;
   }
+
+  .navbar-start {
+    .navbar-item {
+      .icon {
+        margin-right: 0.3rem;
+      }
+    }
+  }
 }
 
 .content-container {
