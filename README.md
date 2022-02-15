@@ -27,10 +27,12 @@ The font "Sonatine" combines all musical symbols to write musical notes in your 
 ### Stats
 
 | Number of  | #      |
-|------------|--------|
+| ---------- | ------ |
 | Glyphs     | 11,820 |
 | Characters | 26     |
 | Ligatures  | 47,826 |
+
+It uses the following technologies/libraries:
 
 - [IcoMoon](https://icomoon.io)
 - [IcoMoon CLI](https://github.com/Yuyz0112/icomoon-cli)
